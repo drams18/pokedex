@@ -1,0 +1,95 @@
+<app-header></app-header>
+
+<section class="container">
+    <div class="row">
+        <h1 class="text-center"><img src="assets/logo.png" width="300" alt=""></h1>
+        <h4 class="text-center text-white">Vous disposez de {{allpokemons.length}} pokemons</h4>
+    </div>
+    <div>
+        <div class="col-md-5 mx-auto">
+            <input type="text" class="form-control" placeholder="je recherche..."(keyup)="filterPokemons(val.value)" #val>
+        </div>
+    </div>
+
+    <div class="row">
+        <h6 class="text-center"><img class="pokeball"src="assets/pok.png" width="30" alt=""></h6>
+    </div>
+
+    <div class="row  mt-5 justify-content-center">
+        <div class="col-md-3 mycard text-center" *ngFor="let pokemon of allpokemons" (click)="getSinglePokemon(pokemon)">
+            <img [src]="pokemon.picture" alt=""style="justify-content-center">
+        </div>
+
+    </div>
+
+    <!--<h1 style="color:darkslategrey;" *ngFor="let pokemon of allpokemons">{{pokemon['name']}}</h1>--->
+</section>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="singleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Nom de pokemon</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Modifier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!--  
+<section class="container">
+    
+
+    <div class="row  mt-5 justify-content-center">
+
+        <div class="col-md-3 card text-center" style="width: 18rem;">
+            <img class="card-img-top" src="assets/maison1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">170€/sem</p>
+            </div>
+          </div>
+
+
+          <div class="col-md-3 card text-center " style="width: 18rem;">
+            <img class="card-img-top" src="assets/maison2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">250€/sem</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 card text-center" style="width: 18rem;">
+            <img class="card-img-top" src="assets/maison3.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">350€/sem</p>
+            </div>
+          </div>
+        
+
+
+          <p>Voici nos trois maison de campagne avec une magnifique exposition. Comme vous pouvez les constater ce sont de tres belle maison qui sont non seulement bien esposé mais aussi bien place pour de bonne vacance reposé</p>
+    </div>
+
+</section>
+
+-->

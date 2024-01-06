@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg bg-danger navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/logo.png" width="50" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Acceuil</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li data-bs-toggle="modal" data-bs-target="#exampleModal"><a class="dropdown-item" href="#">Ajouter un pokemon</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un pokemon</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h1 class="text-center"><img [src]="newPokemon.picture" alt=""></h1>
+          <div class="modal-group">
+            <input type="text" placeholder="Nom du pokemon" class="form-control" [(ngModel)]="newPokemon.name">
+
+          </div>
+
+          <div class="modal-group">
+            <input type="number" placeholder="Hp du pokemon" class="form-control" [(ngModel)]="newPokemon.hp">
+
+          </div>
+
+          <div class="modal-group">
+            <input type="number" placeholder="Cp du pokemon" class="form-control" [(ngModel)]="newPokemon.cp">
+
+          </div>
+
+          <div class="modal-group">
+            <input type="text" placeholder="Types du pokemon" class="form-control" [(ngModel)]="newPokemon.types">
+
+          </div>
+
+          <div class="modal-group">
+            <input type="text" placeholder="Photo du pokemon" class="form-control" [(ngModel)]="newPokemon.picture">
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addPokemon()">Ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>

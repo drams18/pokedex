@@ -1,0 +1,21 @@
+.mycard{
+    border: solid 4px #6D071A;
+    margin:10px;
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255,0.562);
+    transition: all 0.3s linear;
+
+}
+
+.mycard:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.pokeball{
+    transition: all 0.3s linear;
+}
+
+.pokeball:hover{
+    transform: rotate(190deg);
+}
